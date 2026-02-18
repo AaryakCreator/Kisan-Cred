@@ -1,0 +1,25 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Farmer {
+  id            String   @id @default(cuid())
+  name          String
+  location      String
+  region        String   @default("North")
+  farmSize      Float    @default(0) @map("farm_size")
+  crops         String[]
+  walletAddress String?  @map("wallet_address")
+  status        String   @default("pending")
+  score         Int      @default(50)
+  dataHash      String?  @map("data_hash")
+  registeredAt  DateTime @default(now()) @map("registered_at")
+  lastActivity  DateTime @default(now()) @map("last_activity")
+
+  @@map("farmers")
+}
