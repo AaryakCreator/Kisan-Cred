@@ -95,6 +95,7 @@ export async function onboardFarmer(details) {
   if (!res.ok) throw new Error(data.error || 'Onboarding failed')
   // Automatically login the user
   localStorage.setItem('kisan_farmer_id', data.farmerId)
+  _farmerId = data.farmerId // Update local state so next apiFetch uses it
   return data
 }
 
