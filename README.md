@@ -3,4 +3,5 @@ KisanCred is a digital credit intelligence platform designed to improve financia
 
 The platform empowers financial institutions to make faster, more accurate lending decisions while helping farmers secure timely and transparent access to credit.
 
+## [Kisan Cred](https://kisan-cred.vercel.app/)
 ## [Lender's Dashboard](https://agri-score-i1h5021m2-himanshuranjan2552s-projects.vercel.app/)
