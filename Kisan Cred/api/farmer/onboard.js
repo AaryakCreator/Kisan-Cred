@@ -13,6 +13,20 @@ export default async function handler(req, res) {
   }
 
   try {
+    // Check if farmer already exists with this phone number
+    const existingFarmer = await prisma.farmer.findFirst({
+      where: { phone },
+    })
+
+    if (existingFarmer) {
+      return res.status(200).json({
+        message: 'Welcome back!',
+        farmerId: existingFarmer.id,
+        name: existingFarmer.name,
+        isExisting: true
+      })
+    }
+
     const farmer = await prisma.farmer.create({
       data: {
         name,
