@@ -1,0 +1,116 @@
+.apps-empty {
+  text-align: center;
+  padding: 48px 16px;
+  color: var(--text-muted);
+}
+
+.apps-empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.apps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.app-card-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
+.app-card-provider {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.app-card-details {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 14px;
+}
+
+.app-card-detail-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.app-card-detail-value {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-top: 2px;
+}
+
+/* Status timeline */
+.app-timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 10px 0 4px;
+}
+
+.app-timeline-step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.app-timeline-step.done {
+  color: #22c55e;
+}
+
+.app-timeline-step.rejected {
+  color: #ef4444;
+}
+
+.app-timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-primary);
+  flex-shrink: 0;
+}
+
+.app-timeline-step.done .app-timeline-dot {
+  background: #22c55e;
+  border-color: #22c55e;
+}
+
+.app-timeline-step.rejected .app-timeline-dot {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+.app-timeline-line {
+  flex: 1;
+  height: 2px;
+  background: var(--border-primary);
+  margin: 0 4px;
+}
+
+.app-refresh-btn {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}

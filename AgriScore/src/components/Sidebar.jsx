@@ -31,7 +31,7 @@ function Sidebar({ collapsed, onToggle }) {
               </defs>
             </svg>
           </div>
-          {!collapsed && <span className="logo-text">AgriScore</span>}
+          {!collapsed && <span className="logo-text">KisanCred</span>}
         </div>
         <button className="btn btn-ghost btn-icon sidebar-toggle" onClick={onToggle} aria-label="Toggle sidebar">
           {collapsed ? <HiOutlineChevronRight size={18} /> : <HiOutlineChevronLeft size={18} />}
@@ -59,7 +59,7 @@ function Sidebar({ collapsed, onToggle }) {
       <div className="sidebar-footer">
         {!collapsed && (
           <div className="sidebar-version">
-            <span>AgriScore v1.0</span>
+            <span>KisanCred v1.0</span>
             <span className="badge badge-success">PWA</span>
           </div>
         )}

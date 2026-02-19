@@ -1,0 +1,92 @@
+.loans-filter {
+  margin-bottom: 16px;
+}
+
+.loans-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.loan-eligibility-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.loan-eligibility-dot.eligible { background: #22c55e; }
+.loan-eligibility-dot.partial { background: #f59e0b; }
+.loan-eligibility-dot.not_eligible { background: #ef4444; }
+
+.loan-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.loan-feature-tag {
+  font-size: 0.65rem;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.loan-apply-btn {
+  font-size: 0.78rem;
+  padding: 8px 16px;
+  min-height: 36px;
+}
+
+.loans-empty {
+  text-align: center;
+  padding: 40px 16px;
+  color: var(--text-muted);
+}
+
+.loans-empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.btn-success {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  cursor: default;
+  opacity: 0.85;
+}
+
+.loan-toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  border-radius: var(--radius-lg);
+  font-size: 0.82rem;
+  font-weight: 500;
+  z-index: 1000;
+  animation: toast-in 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  max-width: 90vw;
+  text-align: center;
+}
+
+.loan-toast.success {
+  background: #065f46;
+  color: #d1fae5;
+}
+
+.loan-toast.error {
+  background: #7f1d1d;
+  color: #fecaca;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}

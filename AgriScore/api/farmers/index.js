@@ -1,3 +1,5 @@
+import { calculateCreditScore } from '../services/scoring.js'
+
 import prisma from '../lib/db.js'
 
 export default async function handler(req, res) {
@@ -32,13 +34,20 @@ export default async function handler(req, res) {
 
   if (req.method === 'POST') {
     try {
-      const { name, location, region, farmSize, crops, walletAddress } = req.body
+      const { name, location, region, farmSize, crops, walletAddress, revenueHistory } = req.body
 
       if (!name || !location) {
         return res.status(400).json({ error: 'Name and location are required' })
       }
 
-      const score = Math.floor(Math.random() * 30) + 50
+      // Calculate score using the engine
+      // We pass the partial farmer object (id not yet created, but not needed for basic calculation or we can mock it)
+      const farmerData = { 
+        name, location, region, farmSize: parseFloat(farmSize) || 0, id: name + location // minimal mock ID for hash
+      }
+      
+      const { score, details } = await calculateCreditScore(farmerData, revenueHistory || [])
+      
       const dataHash =
         '0x' +
         Array.from({ length: 16 }, () =>
@@ -56,6 +65,18 @@ export default async function handler(req, res) {
           status: 'pending',
           score,
           dataHash,
+          // Store component scores if schema supported it, for now we just store total score
+          // or we could add them to metadata/JSON field if Prisma had one. 
+          // For MVP, total score is enough.
+          
+          revenueHistory: {
+            create: (revenueHistory || []).map(r => ({
+              year: r.year,
+              season: r.season,
+              crop: r.crop,
+              amount: r.amount
+            }))
+          }
         },
       })
 

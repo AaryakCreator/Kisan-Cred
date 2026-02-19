@@ -28,24 +28,8 @@ model Farmer {
   documentsVerified Int      @default(0) @map("documents_verified")
   documentsTotal    Int      @default(5) @map("documents_total")
   applications      LoanApplication[]
-  revenueHistory    RevenueRecord[]
 
   @@map("farmers")
-}
-
-model RevenueRecord {
-  id        String   @id @default(cuid())
-  farmerId  String   @map("farmer_id")
-  year      Int
-  season    String
-  crop      String
-  amount    Float
-  currency  String   @default("INR")
-  createdAt DateTime @default(now()) @map("created_at")
-
-  farmer    Farmer   @relation(fields: [farmerId], references: [id])
-
-  @@map("revenue_records")
 }
 
 model LoanApplication {

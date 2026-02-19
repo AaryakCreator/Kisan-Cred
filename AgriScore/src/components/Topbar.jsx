@@ -32,7 +32,7 @@ function Topbar({ onMenuToggle }) {
         </button>
         <div className="topbar-avatar">
           <div className="avatar-circle">
-            <span>AS</span>
+            <span>KC</span>
           </div>
         </div>
       </div>

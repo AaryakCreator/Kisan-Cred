@@ -1,0 +1,64 @@
+.home-gauge-section {
+  text-align: center;
+  padding: 20px 0 8px;
+}
+
+.home-gauge-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.home-quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.home-quick-actions .btn {
+  font-size: 0.82rem;
+  padding: 14px 12px;
+  border-radius: var(--radius-lg);
+}
+
+.home-loan-scroll {
+  margin: 0 -16px;
+  padding: 0 16px;
+}
+
+.home-loan-card {
+  width: 260px;
+  padding: 16px;
+}
+
+.home-loan-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.home-loan-provider {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.home-loan-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-loan-rate {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+.home-loan-rate span {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}

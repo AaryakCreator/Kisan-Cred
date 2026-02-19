@@ -108,7 +108,7 @@ function RegisterFarmer() {
     <div className="page-container">
       <div className="page-header">
         <h1>Register Farmer</h1>
-        <p>Add a new farmer to the AgriScore platform</p>
+        <p>Add a new farmer to the KisanCred platform</p>
       </div>
 
       {/* Step Indicator */}

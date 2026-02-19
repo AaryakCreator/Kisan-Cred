@@ -122,7 +122,7 @@ function Dashboard() {
     <div className="page-container">
       <div className="page-header">
         <h1>Dashboard</h1>
-        <p>Overview of your agricultural data platform</p>
+        <p>Overview of your KisanCred platform</p>
       </div>
 
       {/* Stat Cards */}
