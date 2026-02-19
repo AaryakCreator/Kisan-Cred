@@ -1,64 +1,217 @@
-.home-gauge-section {
-  text-align: center;
-  padding: 20px 0 8px;
+/* --- Hero Section --- */
+.hero-section {
+  background: var(--gradient-hero);
+  border-radius: var(--radius-xl);
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(27, 77, 62, 0.05);
 }
 
-.home-gauge-label {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin-top: 10px;
-  font-weight: 500;
+.hero-content {
+  flex: 1;
+  z-index: 2;
 }
 
-.home-quick-actions {
+.hero-content h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.hero-content p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  max-width: 200px;
+}
+
+.hero-gauge {
+  background: white;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  position: relative;
+  z-index: 2;
+  margin-left: -10px;
+}
+
+.gauge-status {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+/* --- Services Grid Mini --- */
+.services-grid-mini {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
 }
 
-.home-quick-actions .btn {
-  font-size: 0.82rem;
-  padding: 14px 12px;
-  border-radius: var(--radius-lg);
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 16px 8px;
+  gap: 8px;
+  min-height: 100px;
+  text-align: center;
 }
 
-.home-loan-scroll {
-  margin: 0 -16px;
-  padding: 0 16px;
+.service-item span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
 }
 
-.home-loan-card {
-  width: 260px;
-  padding: 16px;
+.service-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
 }
 
-.home-loan-name {
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin-bottom: 2px;
+.service-icon.green { background: rgba(22, 163, 74, 0.1); color: #16a34a; }
+.service-icon.amber { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+.service-icon.cyan { background: rgba(6, 182, 212, 0.1); color: #0891b2; }
+.service-icon.purple { background: rgba(168, 85, 247, 0.1); color: #a855f7; }
+.service-icon.blue { background: rgba(59, 130, 246, 0.1); color: #2563eb; }
+.service-icon.rose { background: rgba(244, 63, 94, 0.1); color: #e11d48; }
+
+/* --- Risk Card (Dark Theme) --- */
+.risk-card {
+  background: #0f2922; /* Very Dark Green */
+  color: white;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.home-loan-provider {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  margin-bottom: 10px;
-}
-
-.home-loan-row {
+.risk-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.home-loan-rate {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--accent-primary);
+.risk-header h3 {
+  color: white;
+  margin: 0;
 }
 
-.home-loan-rate span {
-  font-size: 0.7rem;
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill { height: 100%; border-radius: 3px; }
+.progress-fill.green { background: #4ade80; }
+.progress-fill.amber { background: #fbbf24; }
+
+.text-white-opacity { color: rgba(255, 255, 255, 0.7); }
+.border-top-white-opacity { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.text-accent { color: #f472b6; }
+.text-success { color: #4ade80; }
+.text-warning { color: #fbbf24; }
+.text-danger { color: #ef4444; }
+
+/* --- Landing Page --- */
+.landing-page {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.landing-hero .logo-badge {
+  font-size: 3rem;
+  background: var(--bg-card);
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: var(--shadow-md);
+}
+
+.landing-hero h1 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.landing-hero p {
+  font-size: 1rem;
   color: var(--text-muted);
-  font-weight: 500;
+  max-width: 300px;
+  margin: 0 auto 32px;
+}
+
+.how-it-works { text-align: left; }
+
+.step-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* --- Loader --- */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border-color);
+  border-top-color: var(--accent-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
 }

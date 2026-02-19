@@ -10,6 +10,8 @@ import Profile from './pages/Profile'
 import Settings from './pages/Settings'
 import MyApplications from './pages/MyApplications'
 import Onboarding from './pages/Onboarding'
+import Services from './pages/Services'
+import Help from './pages/Help'
 
 export const ThemeContext = createContext()
 
@@ -31,11 +33,13 @@ function App() {
           <main className="app-main">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/loans" element={<Loans />} />
               <Route path="/score" element={<ScoreInsights />} />
+              <Route path="/applications" element={<MyApplications />} />
+              <Route path="/help" element={<Help />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/settings" element={<Settings />} />
-              <Route path="/applications" element={<MyApplications />} />
               <Route path="/onboarding" element={<Onboarding />} />
             </Routes>
           </main>

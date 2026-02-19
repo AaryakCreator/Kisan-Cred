@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom'
-import { HiOutlineHome, HiOutlineCash, HiOutlineChartBar, HiOutlineUser, HiOutlineClipboardList } from 'react-icons/hi'
+import { HiOutlineHome, HiOutlineViewGrid, HiOutlineChartBar, HiOutlineUser, HiOutlineQuestionMarkCircle } from 'react-icons/hi'
 import './BottomNav.css'
 
 const tabs = [
   { path: '/', label: 'Home', icon: HiOutlineHome },
-  { path: '/loans', label: 'Loans', icon: HiOutlineCash },
+  { path: '/services', label: 'Services', icon: HiOutlineViewGrid },
   { path: '/score', label: 'Score', icon: HiOutlineChartBar },
-  { path: '/applications', label: 'Applied', icon: HiOutlineClipboardList },
+  { path: '/help', label: 'Help', icon: HiOutlineQuestionMarkCircle },
   { path: '/profile', label: 'Profile', icon: HiOutlineUser },
 ]
 
