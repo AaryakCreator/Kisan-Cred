@@ -87,6 +87,28 @@ function Settings() {
         </div>
       </div>
 
+      {/* Account Actions */}
+      <div className="card settings-section mt-16 animate-slide-up" style={{ borderColor: 'var(--border-primary)' }}>
+        <h3>Account</h3>
+        <button 
+          className="btn btn-block" 
+          style={{ 
+            marginTop: 8, 
+            backgroundColor: 'rgba(239, 68, 68, 0.1)', 
+            color: '#ef4444', 
+            border: '1px solid rgba(239, 68, 68, 0.2)' 
+          }}
+          onClick={() => {
+            if (window.confirm('Are you sure you want to logout?')) {
+              localStorage.removeItem('kisan_farmer_id')
+              window.location.href = '/' // Force reload to clear state
+            }
+          }}
+        >
+          Logout
+        </button>
+      </div>
+
       {/* App Info */}
       <div className="card settings-app-info mt-16 animate-scale">
         <svg className="settings-app-logo" viewBox="0 0 40 40" fill="none">
